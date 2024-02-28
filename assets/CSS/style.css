@@ -42,6 +42,13 @@ main {
     flex-wrap: wrap;
     max-width: 450px;
 
+
+}
+
+#grid_3 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 350px;
 }
 
 .cell {
