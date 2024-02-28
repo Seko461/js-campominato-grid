@@ -30,16 +30,24 @@ main {
     align-items: center;
 }
 
-#grid {
+#grid_1 {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    max-width: 500px;
+    /* border: 1px solid black; */
+}
+
+#grid_2 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 450px;
+
 }
 
 .cell {
     height: 50px;
     width: 50px;
-    border: 1px solid red;
+    border: 1px solid rgb(0, 0, 0);
     line-height: 50px;
     text-align: center;
     color: aquamarine;
