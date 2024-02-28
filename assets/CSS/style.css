@@ -42,4 +42,11 @@ main {
     border: 1px solid red;
     line-height: 50px;
     text-align: center;
+    color: aquamarine;
+
+}
+
+.cell-clicked {
+    background-color: lightblue;
+    color: black;
 }
