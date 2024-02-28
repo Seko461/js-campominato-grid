@@ -40,4 +40,6 @@ main {
     height: 50px;
     width: 50px;
     border: 1px solid red;
+    line-height: 50px;
+    text-align: center;
 }
