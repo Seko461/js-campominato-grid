@@ -30,4 +30,14 @@ main {
     align-items: center;
 }
 
-.grid {}
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.cell {
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+}
