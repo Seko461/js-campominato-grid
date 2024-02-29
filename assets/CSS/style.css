@@ -45,6 +45,7 @@ select:hover {
     padding: .5rem;
     padding-right: .75rem;
     box-shadow: inset .3rem .3rem 1.25rem black;
+    margin-left: 2rem;
 }
 
 #start:hover {
@@ -63,7 +64,22 @@ main {
 
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+main>h3 {
+    position: absolute;
+    top: 10rem;
+    left: 25rem;
+}
+
+main>h4 {
+    position: absolute;
+    top: 11.25rem;
+    left: 24.25rem;
+    font-size: 1.5rem;
+}
+
 
 .grid {
     display: flex;
