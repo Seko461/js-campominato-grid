@@ -37,7 +37,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: aquamarine;
+    /* color: aquamarine; */
     cursor: pointer;
 }
 
@@ -64,4 +64,44 @@ main {
 .cell49 {
     width: calc(100%/7);
     height: calc(100%/7);
+}
+
+.end-game-screen {
+    background-color: rgba(247, 40, 40, 0.733);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    gap: 16px;
+}
+
+.end-game-screen-win {
+    background-color: rgba(255, 238, 0, 0.733);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    gap: 16px;
+}
+
+.score {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }

@@ -6,6 +6,9 @@ const levelSelected = document.getElementById('levels');
 const mushrooms = 16;
 const mushroomsList = [];
 const scoreCounter = document.querySelector('.punteggio');
+const endgame = document.querySelector('.end-game-screen');
+const endgamewin = document.querySelector('.end-game-screen-win');
+const button = document.querySelector('.play-again');
 let score = 0;
 
 let levels = [100, 81, 49]
@@ -24,6 +27,7 @@ function play() {
     reset();
     gridGenerator();
     randomListMushrooms(totalCells);
+    endGame(isVictory);
 }
 
 function gridGenerator() {
@@ -51,6 +55,7 @@ function createCell(i) {
 
         if (mushroomsList.includes(i + 1)) {
             cell.classList.add('mushrooms');
+            endGame(false);
 
 
         } else {
@@ -86,5 +91,21 @@ function randomListMushrooms() {
 function updateScore() {
     score++;
     scoreCounter.innerText = String(score).padStart(5, 0);
+    if (score === maxScore) endGame(true);
 
 }
+function endGame(isVictory) {
+    if (isVictory === true) {
+        endgamewin.classList.remove('hidden');
+
+    } else {
+
+        endgame.classList.remove('hidden');
+
+    }
+
+}
+
+button.addEventListener('click', function () {
+    location.reload();
+})
