@@ -41,9 +41,14 @@ main {
     cursor: pointer;
 }
 
-.cell.clicked {
+.clicked {
     background-color: blue;
     color: white;
+}
+
+.mushrooms {
+    background-color: red;
+    color: black;
 }
 
 .cell100 {
