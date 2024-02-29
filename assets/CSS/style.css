@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bangers", system-ui;
+
+    font-style: normal;
 }
 
 .container {
@@ -12,13 +17,50 @@
 }
 
 nav {
-    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
 }
+
+.right,
+select {
+    font-size: 3rem;
+}
+
+select {
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+#start {
+    font-size: 2rem;
+    padding: .5rem;
+    padding-right: .75rem;
+    box-shadow: inset .3rem .3rem 1.25rem black;
+}
+
+#start:hover {
+    transform: scale(.5rem);
+    cursor: pointer;
+}
+
 
 main {
     display: flex;
     flex-grow: 1;
-    background-color: aquamarine;
+    background-image: url(/assets/img/sfondo-.jpeg);
+    background-repeat: repeat;
+    background-position: bottom;
+
+
     justify-content: center;
     align-items: center;
 }
@@ -33,7 +75,11 @@ main {
 }
 
 .cell {
-    border: 1px solid black;
+    border: 2px solid black;
+    background-image: url(/assets/img/pattern.jpeg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +88,7 @@ main {
 }
 
 .clicked {
-    background-color: blue;
+    background: none;
     color: white;
 }
 
