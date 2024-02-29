@@ -5,63 +5,58 @@
 }
 
 .container {
-    margin: auto;
-    width: 90vh;
-    height: 80vh;
+    height: 90vh;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
 
 nav {
-    height: fit-content;
-    border: 1px solid black;
     padding: 1rem;
-
 }
 
 main {
-    border: 1px solid black;
     display: flex;
     flex-grow: 1;
     background-color: aquamarine;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#grid_1 {
+.grid {
     display: flex;
     flex-wrap: wrap;
-    max-width: 500px;
-    /* border: 1px solid black; */
-}
 
-#grid_2 {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 450px;
+    width: 600px;
+    height: 600px;
 
-
-}
-
-#grid_3 {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 350px;
 }
 
 .cell {
-    height: 50px;
-    width: 50px;
-    border: 1px solid rgb(0, 0, 0);
-    line-height: 50px;
-    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: aquamarine;
-
+    cursor: pointer;
 }
 
-.cell-clicked {
-    background-color: lightblue;
-    color: black;
+.cell.clicked {
+    background-color: blue;
+    color: white;
+}
+
+.cell100 {
+    width: calc(100%/10);
+    height: calc(100%/10);
+}
+
+.cell81 {
+    width: calc(100%/9);
+    height: calc(100%/9);
+}
+
+.cell49 {
+    width: calc(100%/7);
+    height: calc(100%/7);
 }
