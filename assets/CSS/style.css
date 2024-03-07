@@ -1,133 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Bangers", system-ui;
-
-    font-style: normal;
 }
 
-.container {
-    height: 90vh;
-    border: 1px solid black;
+
+body {
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-}
-
-nav {
-
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
-
-
-}
-
-.right,
-select {
-    font-size: 3rem;
-}
-
-select {
-    outline: none;
-    border: none;
-    text-align: center;
-}
-
-select:hover {
-    cursor: pointer;
-}
-
-#start {
-    font-size: 2rem;
-    padding: .5rem;
-    padding-right: .75rem;
-    box-shadow: inset .3rem .3rem 1.25rem black;
-    margin-left: 2rem;
-}
-
-#start:hover {
-    transform: scale(.5rem);
-    cursor: pointer;
-}
-
-
-main {
-    display: flex;
-    flex-grow: 1;
-    background-image: url(/assets/img/sfondo-.jpeg);
-    background-repeat: repeat;
-    background-position: bottom;
-
-
     justify-content: center;
-    align-items: center;
+}
+
+.game-container {
+    margin-left: 30px;
+    width: 484px;
+
+}
+
+#level-page {
+    position: relative;
+    top: 0;
+    left: 25%;
+    margin-top: 2rem;
+}
+
+.score {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.titolo {
+    color: rgb(225, 6, 0);
+    font-family: 'Racing Sans One', sans-serif;
+    text-transform: uppercase;
+    margin-left: 170px;
+}
+
+.titolo2 {
+    color: rgb(225, 6, 0);
+    font-family: 'Racing Sans One', sans-serif;
+    text-transform: uppercase;
+    margin-left: 180px;
+}
+
+.terza-riga {
+
+    font-family: 'Racing Sans One', sans-serif;
+    text-transform: uppercase;
+}
+
+.punteggio {
+    margin-left: 95px;
+    font-family: 'Racing Sans One', sans-serif;
+    text-transform: uppercase;
+
+}
+
+.game-board {
     position: relative;
 }
 
-main>h3 {
-    position: absolute;
-    top: 10rem;
-    left: 25rem;
-}
-
-main>h4 {
-    position: absolute;
-    top: 11.25rem;
-    left: 24.25rem;
-    font-size: 1.5rem;
-}
 
 
 .grid {
+
     display: flex;
     flex-wrap: wrap;
 
-    width: 600px;
-    height: 600px;
+    border: 2px solid black;
+
 
 }
 
 .cell {
-    border: 2px solid black;
-    background-image: url(/assets/img/pattern.jpeg);
-    background-repeat: no-repeat;
-    object-fit: cover;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* color: aquamarine; */
+    width: calc(100% / 10);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    border: 1px solid;
+    /* border: 1px solid red; */
     cursor: pointer;
+    /*border: 1px dashed black;*/
+
+
 }
 
-.clicked {
-    background: none;
-    color: white;
+
+
+.cell:hover {
+    background-color: rgb(117, 117, 117);
 }
 
-.mushrooms {
-    background-color: red;
-    color: black;
+.cell-clicked {
+    background-color: rgb(255, 0, 0);
+    cursor: not-allowed;
 }
 
-.cell100 {
-    width: calc(100%/10);
-    height: calc(100%/10);
+.cell-oil {
+    background-image: url(img/oiloil-image-drawing-marker-pen-5c02897c0e7294.3527135615436701400592.png);
+    background-size: 120%;
+    cursor: not-allowed;
 }
 
-.cell81 {
-    width: calc(100%/9);
-    height: calc(100%/9);
+.cell-champ {
+    background-image: url(img/cup.png);
+    background-size: contain;
+    cursor: not-allowed;
 }
 
-.cell49 {
-    width: calc(100%/7);
-    height: calc(100%/7);
-}
-
+/*schermata di fine gioco*/
 .end-game-screen {
     background-color: rgba(247, 40, 40, 0.733);
     position: absolute;
@@ -139,6 +124,7 @@ main>h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Racing Sans One', sans-serif;
     text-transform: uppercase;
     font-size: 50px;
     gap: 16px;
@@ -155,15 +141,45 @@ main>h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Racing Sans One', sans-serif;
     text-transform: uppercase;
     font-size: 50px;
     gap: 16px;
 }
 
-.score {
-    text-align: center;
+.champion {
+    background-image: url(img/bandiere-da-corsa-a-scacchi-adesivo.jpeg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Racing Sans One', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    gap: 16px;
+}
+
+.play-again {
+    background-color: darkgray;
+    font-size: 20px;
+    padding: 6px 7px 6px 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(196, 196, 196);
 }
 
 .hidden {
     display: none;
+}
+
+.logo-f1 {
+    margin-left: 30px;
+
 }

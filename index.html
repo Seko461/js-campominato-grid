@@ -5,48 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/CSS/style.css">
-    <title>Campo Minato</title>
+    <title>Campo minato</title>
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <img height="100" src="./assets/img/logo.jpeg" alt="">
-            </div>
-            <div class="right">
-                <label for="level">Level: </label>
-                <select name="levels" id="levels">
-                    <option value="" selected>Choose your level</option>
-                    <option value="0">Easy</option>
-                    <option value="1">Medium</option>
-                    <option value="2">Hard</option>
+
+
+    <div class="game-container">
+
+        <h1 class="titolo"> Gran Prix </h1>
+        <h3 class="titolo2">campo minato</h3>
+
+        <div id="level-page" class="level-page ">
+            <form>
+                <label for="level">Scegli il tuo livello</label>
+                <select name="level" id="level">
+                    <option value="100">Easy</option>
+                    <option value="81">Medium</option>
+                    <option value="49">Hard</option>
                 </select>
-                <button type="button" id="start">Start</button>
-            </div>
-        </nav>
-        <main>
-            <h3>SCORE</h3>
-            <h4 class="punteggio">00000</h4>
-            <div id="grid_container">
-
-            </div>
-        </main>
-        <div class="end-game-screen hidden">
-            <h2>End Game</h2>
-
-            <button class="play-again">Press Start</button>
-
+                <button id="start" type="submit" class="play">Start</button>
+            </form>
         </div>
-        <div class="end-game-screen-win hidden ">
-            <h2>You Win</h2>
-
-            <button class="play-again">Press Start</button>
+        <div class="score">
+            <span class="terza-riga">Score</span>
+            <span class="punteggio">00000</span>
 
         </div>
 
+
+        <!--Pannello info-->
+        <div class="game-panel">
+            <div class="box">
+                <div class="small-box"></div>
+            </div>
+        </div>
+
+        <!--Tabellone-->
+        <div class="game-board">
+
+            <div class="grid">
+                <!--Qui ci saranno le celle-->
+
+            </div>
+
+
+
+            <!--Schermata fine gioco-->
+            <div class="end-game-screen hidden">
+                <div class="prima-riga">
+                    <h2>HIT THE</h2>
+                </div>
+                <div class="seconda-riga">
+                    <h2>WALL</h2>
+                </div>
+                <button class="play-again">Press Start</button>
+
+            </div>
+            <div class="end-game-screen-win hidden ">
+                <div class="prima-riga">
+                    <h2>YOU</h2>
+                </div>
+                <div class="seconda-riga">
+                    <h2>WIN</h2>
+                </div>
+                <button class="play-again">Press Start</button>
+
+            </div>
+            <div class="champion hidden">
+                <div class="sopra">
+                    <h2>WORLD</h2>
+                </div>
+                <div class="sotto">
+                    <h2>CHAMPION</h2>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <div class="logo-f1">
+
+        <img src="./assets/img/F1nuova.png" alt="testo alternativo" width="484px">
+    </div>
+
 
     <script src="./assets/JS/main.js"></script>
 </body>
